@@ -1,32 +1,21 @@
-![poster](./.github/poster.png)
+# Fale Conosco-WEB
 
-## Sobre
+## Objetivo:
+- Automatizar Web Site da squad Fale Conosco.
 
-Repositório do treinamento: Workflow de testes contínuos em Cypress no Github Actions
+### Pré requisito:
+- Nodjs instalado: `https://nodejs.org/en/download/`
 
-## Stacks
-- Cypress
-- Javascript
-- Cypress Dashboard
-- Tesults
+### Instalação do Cypress:
+- Abrir terminal na pasta do projeto:
 
-## Rodando
+- Executar o comando `npm install --save-dev cypress`
 
-1. Clonar o repositório, instalar as dependências
-```
-yarn / npm install
-```
+- Executar o comando `npx cypress open`
 
-2. Subir o Cypress UI
-```
-yarn cypress open / npx cypress open 
-```
+### Install moment lib
+- Executar o comando `npm i moment --save-dev`
 
-3. Executar testes em Headless
-```
-yarn cypress run / npx cypress run 
-```
-
-<hr>
-Curso disponível em https://qaxperience.com
+### Install Faker lib
+- Executar o comando `npm install faker`
 

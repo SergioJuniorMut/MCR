@@ -1,13 +1,17 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  projectId: 'u5x39s',
+  chromeWebSecurity: false,
+  defaultCommandTimeout: 55000,
+  pageLoadTimeout: 120000,
+  viewportWidth: 1280,
+  viewportHeight: 800,
   e2e: {
+    // We've imported your old cypress plugins here.
+    // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      return require('./cypress/plugins/index.js')(on, config)
     },
-    viewportWidth: 1280,
-    viewportHeight: 720,
-    baseUrl: "https://loginxp.vercel.app"
-  }
-});
+    baseUrl: 'https://minhaclaroresidencial.claro.com.br/',
+  },
+})
