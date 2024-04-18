@@ -4,6 +4,7 @@
     "cypress-xpath": "^2.0.1"
   },
   "dependencies": {
-    "cypress": "^13.7.3"
+    "cypress": "^13.7.3",
+    "cypress-tesults-reporter": "1.2.0"
   }
 }
