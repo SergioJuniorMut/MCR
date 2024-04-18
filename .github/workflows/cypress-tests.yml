@@ -14,16 +14,18 @@ jobs:
         uses: actions/checkout@v4.1.2
 
       - name: Install dependencies
-        run: yarn install
-        run: npm i moment --save-dev  
-        run: npm install faker
-        run: npm i -D cypress-if
-        run: npm install -D cypress-xpath
+        run: |
+         yarn install
+         npm i moment --save-dev  
+         npm install faker
+         npm i -D cypress-if
+         npm install -D cypress-xpath
         
       - name: Run E2E tests
         run: node runner-electron.js
     env:
       TARGET_TOKEN_ELECTRON: ${{ secrets.TARGET_TOKEN_ELECTRON }}
+      
   cypress-chrome-tests:
     needs: cypress-electron-tests
     runs-on: ubuntu-latest
@@ -35,16 +37,18 @@ jobs:
         uses: actions/checkout@v4.1.2
 
       - name: Install dependencies
-        run: yarn install
-        run: npm i moment --save-dev  
-        run: npm install faker
-        run: npm i -D cypress-if
-        run: npm install -D cypress-xpath
+        run: |
+         yarn install
+         npm i moment --save-dev  
+         npm install faker
+         npm i -D cypress-if
+         npm install -D cypress-xpath
 
       - name: Run E2E tests
         run: node runner-chrome.js
     env:
       TARGET_TOKEN_CHROME: ${{ secrets.TARGET_TOKEN_CHROME }}  
+      
   cypress-firefox-tests:
     needs: cypress-electron-tests
     runs-on: ubuntu-latest
@@ -56,11 +60,12 @@ jobs:
         uses: actions/checkout@v4.1.2
 
       - name: Install dependencies
-        run: yarn install
-        run: npm i moment --save-dev  
-        run: npm install faker
-        run: npm i -D cypress-if
-        run: npm install -D cypress-xpath
+        run: |
+         yarn install
+         npm i moment --save-dev  
+         npm install faker
+         npm i -D cypress-if
+         npm install -D cypress-xpath
 
       - name: Run E2E tests
         run: node runner-firefox.js
