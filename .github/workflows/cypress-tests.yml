@@ -15,7 +15,19 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+     
+      - name: Install moment lib
+        run: npm i moment --save-dev  
+      
+      - name: Install Faker lib
+        run: npm install faker
+      
+      - name: Install cypress-if
+        run: npm i -D cypress-if
 
+      - name:  Install cypress-xpath
+        run: npm install -D cypress-xpath
+        
       - name: Run E2E tests
         run: node runner-electron.js
     env:
