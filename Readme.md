@@ -1,4 +1,4 @@
-# Fale Conosco-WEB
+# Fale Conosco
 
 ## Objetivo:
 - Automatizar Web Site da squad Fale Conosco.
@@ -19,3 +19,8 @@
 ### Install Faker lib
 - Executar o comando `npm install faker`
 
+### Install cypress-if
+- Executar o comando `npm i -D cypress-if`
+
+### Install cypress-xpath
+- Executar o comando `npm install -D cypress-xpath`
